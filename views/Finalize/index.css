@@ -1,0 +1,130 @@
+.page-finalize-container {
+  background: #C7B886;
+  width: 100%;
+  height: 1478px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container h1 {
+  color: #000;
+  font-size: 54px;
+  font-weight: 600;
+  padding: 20px;
+  margin-bottom: 25px;
+
+  font-style: normal;
+  font-family: Playfair Display;
+  line-height: normal;
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.name-field,
+.cpf-field,
+.telefone-field,
+.email-field,
+.endereco-field,
+.field-number,
+.cep-field,
+.endereco-content,
+.evento-field {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.form-content h2 {
+  color: #000;
+  font-size: 25px;
+  font-weight: 600;
+  margin-right: 12px;
+
+  font-family: Playfair Display;
+  font-style: normal;
+  line-height: normal;
+}
+
+.name-field input,
+.cpf-field input,
+.telefone-field input,
+.email-field input,
+.evento-field input,
+.endereco-content input {
+  width: 420px;
+  height: 40px;
+  padding-left: 8px;
+  margin-left: 8px;
+  margin-top: 10px;
+
+  border: none;
+  border-radius: 10px;
+  background: #FFF;
+}
+
+.endereco-content {
+  width: 330px;
+  height: 38px;
+  padding-left: 8px;
+  border: none;
+  border-radius: 10px;
+}
+
+.field-number h2 {
+  margin-left: 10px;
+}
+
+.field-number input {
+  width: 150px;
+  height: 35px;
+  padding-left: 8px;
+  margin-left: 8px;
+  margin-right: 30px;
+
+  border: none;
+  border-radius: 10px;
+  background: #FFF;
+}
+
+.cep-field h2 {
+  margin-left: 10px;
+}
+
+.endereco-field {
+  margin-top: 15px;
+
+}
+
+.cep-field input {
+  width: 150px;
+  height: 35px;
+  padding-left: 8px;
+  margin-left: 8px;
+  margin-right: 30px;
+
+  border: none;
+  border-radius: 10px;
+  background: #FFF;
+}
+
+.form-content p {
+  color: #000;
+  font-size: 15px;
+  font-weight: 400;
+
+  font-family: Playfair Display;
+  font-style: normal;
+  line-height: normal;
+}
