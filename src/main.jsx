@@ -3,12 +3,17 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import Home from '../views/Home/Home.jsx'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Finalize from '../views/Finalize/Finalize';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
-  }
+  },
+  {
+    path: "/finalizar",
+    element: <Finalize />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
