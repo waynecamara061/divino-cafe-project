@@ -1,27 +1,33 @@
 body {
-  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
-.carrosel {
+.carrossel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
   overflow: hidden;
 }
 
-.container-banner {
-  position: relative;
-  animation: slide 50s infinite ease-out;
-  display: flex;
-  height: 100vh;
-  width: 120vw;
+.item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 
+.item.active {
+  opacity: 1;
+}
 
-@keyframes slide {
-  from {
-    transform: translateX(0%);
-  }
-  to {
-    transform: translateX(-150%);
-  }
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .banner {
@@ -31,20 +37,21 @@ body {
   text-align: center;
 }  
 
+.geral {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .logo img {
   width: 200px;
 }
 
-.logo {
-  position: fixed;
-  bottom: 500px;
-  left: 900px;
-}
-
 .texto-divino {
-  position: fixed;
-  bottom: 400px;
-  left: 600px;
   color: #fff;
   text-align: center;
   font-family: Mulish;
@@ -55,15 +62,11 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  font-family: Mulish;
 }
 
 .texto-divino span {
   font-weight: 800;
-}
-.btn {
-  position: fixed;
-  bottom: 300px;
-  left: 870px;
 }
 
 .btn button {
