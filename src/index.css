@@ -1,28 +1,8 @@
+
 * {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
-
+   
 }
 
-textarea:focus,
-input:focus,
-select:focus {
-   box-shadow: 0 0 0 0;
-   border: 0 none;
-   outline: 0;
-}
-
-body::-webkit-scrollbar {
-   width: 1px;
-}
-
-body::-webkit-scrollbar-track {
-   background: transparent;
-}
-
-body::-webkit-scrollbar-thumb {
-
-   border-radius: 20px;
-   border: 3px solid #0000007a;
-}
