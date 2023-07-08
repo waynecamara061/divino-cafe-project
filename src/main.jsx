@@ -4,6 +4,8 @@ import './index.css'
 import Home from '../views/Home/Home.jsx'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Finalize from '../views/Finalize/Finalize';
+import Cardapio from '../views/Cardapio/Cardapio';
+import { DOCES_MOCK } from './mock/DocesMock';
 
 const router = createBrowserRouter([
   {
@@ -13,6 +15,10 @@ const router = createBrowserRouter([
   {
     path: "/finalizar",
     element: <Finalize />,
+  },
+  {
+    path: "/cardapio",
+    element: <Cardapio />,
   },
 ]);
 

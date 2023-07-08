@@ -1,0 +1,49 @@
+#cardapio {
+    background-color: #C7B886;
+    width: 100vw;
+    height: 100%;
+
+    #cardapio_titulo {
+        text-align: center;
+        margin-top: 70px;
+        font-size: 54px;
+        font-weight: 600;
+    }
+
+    #cardapio__menus {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 70px;
+
+        .cardapio__menus-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .sub-menu {
+                font-size: 40px;
+                font-weight: 600;
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                text-align: center;
+            }
+        }
+
+        .cardapio__menus-img {
+            margin: 50px 50px 20px 50px;
+            width: 70%;
+        }
+    }
+
+    #info {
+        font-size: 24px;
+        font-weight: 400;
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 200px;
+        margin-right: 10%;
+    }
+}
