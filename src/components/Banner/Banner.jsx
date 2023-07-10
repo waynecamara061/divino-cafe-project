@@ -43,7 +43,7 @@ const Banner = () => {
         <div className="btn">
           <button>SOBRE NÓS</button>
           <button>
-            <Link to={`/menu`} id='button-menu'>CARDÁPIO</Link>
+            <Link to={`/Cardapio`} id='button-menu'>CARDÁPIO</Link>
           </button>
         </div>
       </div>
