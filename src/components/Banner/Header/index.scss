@@ -1,8 +1,16 @@
 .headerComp {
-    background-color: black;
-    width: 100%;
+    font-family: Playfair Display;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    background-image: url('../../src/img/bannerHeaderCardapio.svg');
+    background-size: cover;
 
     &__component {
+        padding-top: 33px;
+        padding-bottom: 80px;
+    
         display: flex;
         justify-content: space-around;
         align-items: center;

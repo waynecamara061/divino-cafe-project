@@ -3,9 +3,9 @@ import "./index.scss"
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from 'react';
 
-import banner1 from '../../src/img/banner1.svg'
+import banner from '../../src/img/banner.svg'
 import banner2 from "../../src/img/banner2.jpg"
-import banner3 from "../../src/img/banner3.jpg"
+import banner3 from "../../src/img/banner3.png"
 import banner4 from "../../src/img/banner4.jpg"
 
 const Home = () => {
@@ -21,7 +21,7 @@ const Home = () => {
     };
   }, []);
 
-  const images = [banner1, banner2, banner3, banner4];
+  const images = [banner, banner2, banner3, banner4];
 
   return (
     <>
@@ -37,7 +37,7 @@ const Home = () => {
           <img src={logo} alt="Logo Divino Café" />
         </div>
         <div className="carrossel__texto-divino">
-          <h1>Bem vindo ao <span>Divino Café & Cia</span></h1>
+          <h1>Bem vindo ao <strong>Divino Café & Cia</strong></h1>
           <p>Breve descrição sobre o café ou alguma frase que fale sobre o espírito da empresa</p>
         </div>
         <div className="carrossel__btn">
