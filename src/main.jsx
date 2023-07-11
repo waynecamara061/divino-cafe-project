@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import './index.css'
+import './index.scss'
 import Home from '../views/Home/Home.jsx'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Cardapio from '../views/Cardapio/Cardapio';
@@ -12,6 +12,10 @@ const router = createBrowserRouter([
     path: "/",
     element: <Home />,
   },
+  // {
+  //   path: "/",
+  //   element: <Home />,
+  // },
   {
     path: "/cardapio",
     element: <Cardapio />,

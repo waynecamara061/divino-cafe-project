@@ -1,8 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;900&display=swap');
-body {
-  margin: 0;
-  padding: 0;
-}
 
 .carrossel {
   position: relative;
@@ -26,6 +22,7 @@ body {
 
     &__item img {
       width: 100%;
+      height: 100%;
       object-fit: cover;
     }
 
@@ -56,29 +53,34 @@ body {
       color: #fff;
       text-align: center;
       font-family: 'Bodoni Moda', serif;
-    }
 
-    &__texto-divino h1 {
-      font-family: Mulish;
-      font-size: 60px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-    }
+      h1 {
+        margin: 0;
+        font-family: Mulish;
+        font-size: 60px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
 
-    &__texto-divino span {
-      font-family: Mulish;
-      font-weight: 600;
+      p {
+        font-family: Mulish;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
     }
 
     &__btn button {
-      margin: 0 0 0 15px;
       background-color: #fff;
       border: none;
-      width: 110px;
-      height: 40px;
-      border-radius: 7px;
-      font-size: 15px;
+      width: 250px;
+      height: 80px;
+      border-radius: 500px;
+      font-size: 30px;
       cursor: pointer;
     }
     
