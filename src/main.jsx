@@ -7,6 +7,7 @@ import Cardapio from '../views/Cardapio/Cardapio';
 import Bebidas from '../views/Bebidas/Bebidas';
 import Site from '../views/Site/Site.jsx';
 import { DOCES_MOCK } from './mock/DocesMock';
+import { BEBIDAS_MOCK } from './mock/BebidasMock';
 
 const router = createBrowserRouter([
   {
@@ -23,7 +24,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/bebidas",
-    element: <Bebidas />,
+    element: <Bebidas data={BEBIDAS_MOCK}/>,
   },
 ]);
 
