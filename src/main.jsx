@@ -5,6 +5,7 @@ import Home from '../views/Home/Home.jsx'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Cardapio from '../views/Cardapio/Cardapio';
 import Bebidas from '../views/Bebidas/Bebidas'
+import Salgados from '../views/Salgados/Salgados';
 import { DOCES_MOCK } from './mock/DocesMock';
 
 const router = createBrowserRouter([
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: "/bebidas",
     element: <Bebidas />,
+  },
+  {
+    path: "/salgados",
+    element: <Salgados />,
   },
 ]);
 
