@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Cardapio from '../views/Cardapio/Cardapio';
 import Bebidas from '../views/Bebidas/Bebidas'
 import { DOCES_MOCK } from './mock/DocesMock';
+import Descartaveis from '../views/Descartaveis/Descartaveis';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: "/bebidas",
     element: <Bebidas />,
+  },
+  {
+    path: "/descartaveis",
+    element: <Descartaveis />,
   },
 ]);
 
