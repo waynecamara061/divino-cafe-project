@@ -42,7 +42,7 @@ const Home = () => {
         </div>
         <div className="carrossel__btn">
           <button>
-            <Link to={`/Cardapio`} className='carrossel__button-menu'>ENTRAR</Link>
+            <Link to={`/Site`} className='carrossel__button-menu'>ENTRAR</Link>
           </button>
         </div>
       </div>
