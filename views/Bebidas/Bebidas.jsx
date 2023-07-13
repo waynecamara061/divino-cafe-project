@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import './index.scss';
 import Header from '../../src/components/Banner/Header/Header';
 import BebidasProduct from '../../src/components/Banner/Header/ProductBebidas/produto';
+import TabelaPedidos from '../TabelaPedidos/TabelaPedidos';
 
 function Bebidas({ data }) {
   const cafe = data.filter((bebida) => bebida.tipo === 'Café');
@@ -62,6 +63,21 @@ function Bebidas({ data }) {
 
   useEffect(() => {
     console.log(itensAdicionados);
+  }, [itensAdicionados]);
+
+  const [exibirTabela, setExibirTabela] = useState(false);
+
+  // Função para exibir ou ocultar a tabela de pedidos
+  const alternarExibicaoTabela = () => {
+    setExibirTabela(!exibirTabela);
+  };
+
+  const finalizarPedido = useCallback((event) => {
+    event.preventDefault();
+    // Lógica para enviar o pedido ao finalizar
+    console.log('Pedido finalizado:', itensAdicionados);
+    // Limpar o estado ou fazer qualquer outra ação necessária
+    setItensAdicionados([]);
   }, [itensAdicionados]);
   
   return (
@@ -124,9 +140,14 @@ function Bebidas({ data }) {
                 ))}
             </div>
           </div>
+          <button onClick={alternarExibicaoTabela}>
+                {exibirTabela ? 'Ocultar Tabela de Pedidos' : 'Exibir Tabela de Pedidos'}
+          </button>
+          {exibirTabela && <TabelaPedidos pedidos={itensAdicionados} />}
         </div>
       </div>
     </div>
+    
   );
 }
 

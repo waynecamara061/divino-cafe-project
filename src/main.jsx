@@ -13,10 +13,6 @@ const router = createBrowserRouter([
     path: "/",
     element: <Home />,
   },
-  // {
-  //   path: "/",
-  //   element: <Home />,
-  // },
   {
     path: "/cardapio",
     element: <Cardapio />,
