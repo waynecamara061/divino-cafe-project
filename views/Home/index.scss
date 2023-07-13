@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;900&display=swap');
+
+.carrossel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+    &__item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    &__item.active {
+      opacity: 1;
+    }
+
+    &__item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &__banner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    &__geral {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &__logo img {
+      width: 345px;
+    }
+
+    &__texto-divino {
+      color: #fff;
+      text-align: center;
+      font-family: 'Bodoni Moda', serif;
+
+      h1 {
+        margin: 0;
+        font-family: Mulish;
+        font-size: 60px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      p {
+        font-family: Mulish;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+    }
+
+    &__btn button {
+      background-color: #fff;
+      border: none;
+      width: 250px;
+      height: 80px;
+      border-radius: 500px;
+      font-size: 30px;
+      cursor: pointer;
+    }
+    
+    &__button-menu {
+      color: #000;
+      text-decoration: none;
+    }
+  }
+
+
+
+
+
+
+
+
+
