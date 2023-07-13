@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+.nServicos{
+    background-color: #C7B886;
+    color: black;
+    text-align: center;
+    font-family: Playfair Display ;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    & h1{
+        font-size: 54px;
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+
+    & h2{
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        text-decoration: underline;
+    }
+
+    & h3{
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+}
+
+.nLinks{
+    font-family: Playfair Display;
+    color: white;
+    background-color: #644B35;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    & h1{
+        margin-bottom: 40px;
+    }
+
+    &__links{
+        text-decoration: none;
+        
+        align-items: center;
+        justify-content:center;
+
+        display: flex;
+        flex-direction: row;
+        
+    
+        & a{
+            color: white;
+            text-decoration: none;
+            margin-right: 10px;
+            vertical-align: middle;
+
+            & img {
+                vertical-align: baseline;
+                margin-left: 60px;
+            }
+        }
+    }
+
+}
+
+.nOrcamento{
+    background-color: #C7B886;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    color: black;
+    font-family: Playfair Display;
+    padding-top: 40px;
+    padding-bottom: 20px;
+
+    & h1{
+        margin-bottom: 20px;
+        font-size: 32px;
+    }
+
+    & button{
+        width: 400px;
+        height: 120px;
+        font-size: 26px;
+        font-weight: 700;
+        font-family: Playfair Display;
+
+        border-radius: 15px;
+        color: #C7B886;
+        background-color: #644B35;
+        
+        cursor: pointer;
+    }
+
+    & button:hover{
+        color: #644B35;
+        background-color: #C7B886;
+    }
+}
