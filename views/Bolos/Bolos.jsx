@@ -11,7 +11,7 @@ export const Bolos = ({ data }) => {
     <div>
       <Header />
       <div className="bolos">
-        <h1 className="bolos__title">BEBIDAS</h1>
+        <h1 className="bolos__title">Bolos</h1>
         <div className="bolos__cards">
           <div>
             <h1>Mini Bolo</h1>
