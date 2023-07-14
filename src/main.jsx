@@ -10,6 +10,7 @@ import Salgados from '../views/Salgados/Salgados';
 import { BEBIDAS_MOCK } from './mock/BebidasMock';
 import AdicionarPedidos from './components/Banner/Header/AdicionarPedidos/AdicionarPedidos';
 import { DOCES_MOCK } from './mock/DocesMock';
+import Doces from '../views/Doces/Doces';
 import { BOLOS_MOCK } from './mock/BolosMock'
 import { Bolos } from '../views/Bolos/Bolos';
 import Finalizar from '../views/Finalizar';
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
   {
     path: "/bolos",
     element: <Bolos data={BOLOS_MOCK} />,
+  },
+  {
+    path: "/doces",
+    element: <Doces data={DOCES_MOCK} />,
   },
   {
     path: "/finalizar",

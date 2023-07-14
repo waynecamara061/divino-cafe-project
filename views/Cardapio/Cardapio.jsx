@@ -20,7 +20,7 @@ const Cardapio = () => {
                     <h2 className="cardapio__subMenu">Salgados</h2>
                 </div>
                 <div className="cardapio__menus-card">
-                    <img className="cardapio__menus-img" src={docesImg} alt="salgadosImg" />
+                    <Link to={`/Doces`}><img className="cardapio__menus-img" src={docesImg} alt="salgadosImg" /></Link>
                     <h2 className="cardapio__subMenu">Doces</h2>
                 </div>
                 <div className="cardapio__menus-card">
@@ -40,7 +40,7 @@ const Cardapio = () => {
                     <h2 className="cardapio__subMenu">Descartáveis</h2>
                 </div>
             </div>
-            
+
 
             <p className="cardapio__info">*Imagens meramente ilustrativas</p>
         </div>
