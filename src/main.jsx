@@ -10,6 +10,7 @@ import { BEBIDAS_MOCK } from './mock/BebidasMock';
 //import { DOCES_MOCK } from './mock/DocesMock';
 import { BOLOS_MOCK } from './mock/BolosMock'
 import { Bolos } from '../views/Bolos/Bolos';
+import Finalizar from '../views/Finalizar';
 
 
 const router = createBrowserRouter([
@@ -18,20 +19,24 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
-     path: "/site",
-     element: <Site />,
-   },
+    path: "/site",
+    element: <Site />,
+  },
   {
     path: "/cardapio",
     element: <Cardapio />,
   },
   {
     path: "/bebidas",
-    element: <Bebidas data={BEBIDAS_MOCK}/>,
+    element: <Bebidas data={BEBIDAS_MOCK} />,
   },
   {
     path: "/bolos",
-    element: <Bolos data={BOLOS_MOCK}/>,
+    element: <Bolos data={BOLOS_MOCK} />,
+  },
+  {
+    path: "/finalizar",
+    element: <Finalizar />,
   },
 ]);
 
