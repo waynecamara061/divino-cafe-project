@@ -16,7 +16,7 @@ const Cardapio = () => {
             <h1 className="cardapio__titulo">CARDÁPIO</h1>
             <div className="cardapio__menus">
                 <div className="cardapio__menus-card">
-                    <img className="cardapio__menus-img" src={salgadosImg} alt="salgadosImg" />
+                    <Link to='/salgados'><img className="cardapio__menus-img" src={salgadosImg} alt="salgadosImg" /></Link>
                     <h2 className="cardapio__subMenu">Salgados</h2>
                 </div>
                 <div className="cardapio__menus-card">
