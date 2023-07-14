@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function TabelaPedidos({ pedidos, finalizarPedido }) {
   return (
@@ -23,7 +24,11 @@ function TabelaPedidos({ pedidos, finalizarPedido }) {
           ))}
         </tbody>
       </table>
-      <button type="submit">Finalizar Pedido</button>
+      <Link to={"/finalizar"}>
+        <button type="submit">
+          Finalizar Pedido
+        </button>
+      </Link>
     </form>
   );
 }
