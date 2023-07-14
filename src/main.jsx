@@ -7,7 +7,6 @@ import Cardapio from '../views/Cardapio/Cardapio';
 import Site from '../views/Site/Site.jsx';
 import Bebidas from '../views/Bebidas/Bebidas'
 import Salgados from '../views/Salgados/Salgados';
-import { DOCES_MOCK } from './mock/DocesMock';
 import { BEBIDAS_MOCK } from './mock/BebidasMock';
 import AdicionarPedidos from './components/Banner/Header/AdicionarPedidos/AdicionarPedidos';
 import { DOCES_MOCK } from './mock/DocesMock';
