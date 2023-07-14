@@ -1,14 +1,19 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import React from 'react';
 import './index.scss';
 
 const BebidasProduct = ({ data, onAdicionar, onRemover }) => {
-  const [counter, setCounter] = useState(0);
+  const initialValue = parseInt(localStorage.getItem(`counter_${data.nome}`)) || 0;
+  const [counter, setCounter] = useState(initialValue);
+
+  useEffect(() => {
+    localStorage.setItem(`counter_${data.nome}`, counter.toString());
+  }, [counter, data.nome]);
 
   const decrementar = () => {
     if (counter > 0) {
       onRemover(data.nome);
-      setCounter(counter - 1);
+      setCounter((prevCounter) => prevCounter - 1);
     }
   };
 
@@ -19,10 +24,14 @@ const BebidasProduct = ({ data, onAdicionar, onRemover }) => {
         <h2>{data.preco}</h2>
         <button onClick={decrementar}>-</button>
         <span>{counter}</span>
-        <button onClick={() => {
-          onAdicionar(data.nome);
-          setCounter(counter + 1);
-        }}>+</button>
+        <button
+          onClick={() => {
+            onAdicionar(data.nome);
+            setCounter((prevCounter) => prevCounter + 1);
+          }}
+        >
+          +
+        </button>
       </div>
     </div>
   );

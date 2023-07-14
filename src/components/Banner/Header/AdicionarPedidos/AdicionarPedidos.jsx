@@ -1,14 +1,24 @@
 import React, { useState, useEffect, useCallback } from 'react';
 
-const AdicionarPedidos = () => {
+export const useAdicionarPedidos = () => {
   const [itensAdicionados, setItensAdicionados] = useState([]);
-  // Função para adicionar um item
+
+  useEffect(() => {
+    const storedItens = localStorage.getItem('itensAdicionados');
+    if (storedItens) {
+      setItensAdicionados(JSON.parse(storedItens));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('itensAdicionados', JSON.stringify(itensAdicionados));
+    console.log('itensAdicionados atualizados:', itensAdicionados);
+  }, [itensAdicionados]);
+
   const adicionarItem = (nomeItem) => {
-    // Verifica se o item já foi adicionado
     const itemExistente = itensAdicionados.find((item) => item.nome === nomeItem);
 
     if (itemExistente) {
-      // Se o item já existe, atualiza a quantidade
       const novosItens = itensAdicionados.map((item) => {
         if (item.nome === nomeItem) {
           return {
@@ -21,7 +31,6 @@ const AdicionarPedidos = () => {
 
       setItensAdicionados(novosItens);
     } else {
-      // Se o item não existe, adiciona um novo item ao array
       setItensAdicionados([
         ...itensAdicionados,
         {
@@ -32,47 +41,45 @@ const AdicionarPedidos = () => {
     }
   };
 
-  // Função para remover um item
   const removerItem = (nomeItem) => {
     const novosItens = itensAdicionados.map((item) => {
       if (item.nome === nomeItem) {
         return {
           ...item,
-          quantidade: item.quantidade - 1, // Altere o sinal de + para -
+          quantidade: item.quantidade - 1,
         };
       }
       return item;
     });
-  
-    // Remova os itens com quantidade zero
+
     const itensFiltrados = novosItens.filter((item) => item.quantidade > 0);
-  
+
     setItensAdicionados(itensFiltrados);
-  };
-
-  useEffect(() => {
-    console.log(itensAdicionados);
-  }, [itensAdicionados]);
-
-  const [exibirTabela, setExibirTabela] = useState(false);
-
-  // Função para exibir ou ocultar a tabela de pedidos
-  const alternarExibicaoTabela = () => {
-    setExibirTabela(!exibirTabela);
   };
 
   const finalizarPedido = useCallback((event) => {
     event.preventDefault();
-    // Lógica para enviar o pedido ao finalizar
     console.log('Pedido finalizado:', itensAdicionados);
-    // Limpar o estado ou fazer qualquer outra ação necessária
     setItensAdicionados([]);
+    localStorage.removeItem('itensAdicionados');
   }, [itensAdicionados]);
 
-  return (
-    { itensAdicionados, adicionarItem, removerItem, exibirTabela, alternarExibicaoTabela, finalizarPedido,}
-    
-  )
-}
+  console.log('itensAdicionados inicial:', itensAdicionados);
+  
+  const [exibirModal, setExibirModal] = useState(false);
 
-export default AdicionarPedidos
+  const alternarExibicaoModal = () => {
+    setExibirModal(!exibirModal);
+  };
+
+  return {
+    exibirModal,
+    itensAdicionados,
+    adicionarItem,
+    removerItem,
+    finalizarPedido,
+    alternarExibicaoModal,
+  };
+};
+
+export default useAdicionarPedidos

@@ -1,11 +1,11 @@
 import React from 'react';
 
-function TabelaPedidos({ pedidos, finalizarPedido }) {
+function TabelaPedidos({ pedidos, finalizarPedido}) {
   return (
     <form onSubmit={finalizarPedido}>
-      <table>
+      <table className='tabela'>
         <thead>
-          <tr>
+          <tr className='tabela__celulas'>
             <th>Item</th>
             <th>Quantidade</th>
             <th>Observação</th>
@@ -23,7 +23,6 @@ function TabelaPedidos({ pedidos, finalizarPedido }) {
           ))}
         </tbody>
       </table>
-      <button type="submit">Finalizar Pedido</button>
     </form>
   );
 }
