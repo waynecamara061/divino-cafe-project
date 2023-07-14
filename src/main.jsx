@@ -9,11 +9,11 @@ import Bebidas from '../views/Bebidas/Bebidas'
 import Salgados from '../views/Salgados/Salgados';
 import { DOCES_MOCK } from './mock/DocesMock';
 import { BEBIDAS_MOCK } from './mock/BebidasMock';
-//import { DOCES_MOCK } from './mock/DocesMock';
+import AdicionarPedidos from './components/Banner/Header/AdicionarPedidos/AdicionarPedidos';
+import { DOCES_MOCK } from './mock/DocesMock';
 import { BOLOS_MOCK } from './mock/BolosMock'
 import { Bolos } from '../views/Bolos/Bolos';
 import Finalizar from '../views/Finalizar';
-
 
 const router = createBrowserRouter([
   {
@@ -30,7 +30,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/bebidas",
-    element: <Bebidas data={BEBIDAS_MOCK} />,
+    element: <Bebidas data={BEBIDAS_MOCK} adicionarPedidos={AdicionarPedidos}/>,
   },
   {
     path: "/bolos",
