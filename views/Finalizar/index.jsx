@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './style.css'
 import Header from '../../src/components/Banner/Header/Header';
+import { Link, Navigate } from 'react-router-dom';
 
 function Finalizar() {
     const [counter, setCounter] = useState(0)
@@ -112,10 +113,11 @@ function Finalizar() {
                             </div> */}
                             <div className='total-content'>
                                 <h1>Total: R${counter}</h1>
-
-                                <button>
-                                    Finalizar pedido
-                                </button>
+                                <Link to={"/confirmar"}>
+                                    <button>
+                                        Finalizar pedido
+                                    </button>
+                                </Link>
                             </div>
                         </div>
                     </div>

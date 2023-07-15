@@ -14,6 +14,7 @@ import Doces from '../views/Doces/Doces';
 import { BOLOS_MOCK } from './mock/BolosMock'
 import { Bolos } from '../views/Bolos/Bolos';
 import Finalizar from '../views/Finalizar';
+import ConfirmarPedido from '../views/Confirmar';
 
 const router = createBrowserRouter([
   {
@@ -30,7 +31,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/bebidas",
-    element: <Bebidas data={BEBIDAS_MOCK} adicionarPedidos={AdicionarPedidos}/>,
+    element: <Bebidas data={BEBIDAS_MOCK} adicionarPedidos={AdicionarPedidos} />,
   },
   {
     path: "/bolos",
@@ -41,12 +42,16 @@ const router = createBrowserRouter([
     element: <Doces data={DOCES_MOCK} />,
   },
   {
+    path: "/salgados",
+    element: <Salgados />,
+  },
+  {
     path: "/finalizar",
     element: <Finalizar />,
   },
   {
-    path: "/salgados",
-    element: <Salgados />,
+    path: "/confirmar",
+    element: <ConfirmarPedido />
   },
 ]);
 
