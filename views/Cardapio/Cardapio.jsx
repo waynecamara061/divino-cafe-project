@@ -36,7 +36,7 @@ const Cardapio = () => {
                     <h2 className="cardapio__subMenu">Utensílios e <br></br>Equipamentos</h2>
                 </div>
                 <div className="cardapio__menus-card">
-                    <img className="cardapio__menus-img" src={descartaveisImg} alt="salgadosImg" />
+                    <Link to={`/descartaveis`}><img className="cardapio__menus-img" src={descartaveisImg} alt="salgadosImg" /></Link>
                     <h2 className="cardapio__subMenu">Descartáveis</h2>
                 </div>
             </div>

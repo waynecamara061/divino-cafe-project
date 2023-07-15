@@ -5,6 +5,7 @@ import Home from '../views/Home/Home.jsx';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Cardapio from '../views/Cardapio/Cardapio';
 import Site from '../views/Site/Site.jsx';
+import Galeria from '../views/Galeria/Galeria';
 import Bebidas from '../views/Bebidas/Bebidas'
 import Salgados from '../views/Salgados/Salgados';
 import { BEBIDAS_MOCK } from './mock/BebidasMock';
@@ -16,6 +17,7 @@ import { Bolos } from '../views/Bolos/Bolos';
 import Finalizar from '../views/Finalizar';
 import ConfirmarPedido from '../views/Confirmar';
 
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -24,6 +26,10 @@ const router = createBrowserRouter([
   {
     path: "/site",
     element: <Site />,
+  },
+  {
+    path: "/galeria",
+    element: <Galeria />
   },
   {
     path: "/cardapio",
@@ -52,6 +58,10 @@ const router = createBrowserRouter([
   {
     path: "/confirmar",
     element: <ConfirmarPedido />
+  },
+  {
+    path: "/descartaveis",
+    element: <Descartaveis data={DESCARTAVEIS_MOCK}/>,
   },
 ]);
 
