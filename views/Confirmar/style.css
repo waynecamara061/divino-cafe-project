@@ -1,0 +1,36 @@
+.confirmar-pedido-container {
+  background-color: #C7B886;
+  width: 100%;
+  height: 690px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Playfair Display";
+}
+
+.confirmar-pedido-container h1 {
+  line-height: 71.98px;
+  font-weight: 500;
+  font-size: 40px;
+
+  padding-bottom: 45px;
+}
+
+.confirmar-pedido-container h2 {
+  line-height: 53.32px;
+  font-weight: 500;
+  font-size: 30px;
+
+  padding-bottom: 20px;
+}
+
+.confirmar-pedido-container h3 {
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 53.32px;
+
+  text-align: center;
+}

@@ -4,13 +4,18 @@ import './index.scss'
 import Home from '../views/Home/Home.jsx';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Cardapio from '../views/Cardapio/Cardapio';
-import Bebidas from '../views/Bebidas/Bebidas';
 import Site from '../views/Site/Site.jsx';
 import Galeria from '../views/Galeria/Galeria';
-import { DOCES_MOCK } from './mock/DocesMock';
-import Descartaveis from '../views/Descartaveis/Descartaveis';
+import Bebidas from '../views/Bebidas/Bebidas'
+import Salgados from '../views/Salgados/Salgados';
 import { BEBIDAS_MOCK } from './mock/BebidasMock';
-import { DESCARTAVEIS_MOCK } from './mock/DescartaveisMock'
+import AdicionarPedidos from './components/Banner/Header/AdicionarPedidos/AdicionarPedidos';
+import { DOCES_MOCK } from './mock/DocesMock';
+import Doces from '../views/Doces/Doces';
+import { BOLOS_MOCK } from './mock/BolosMock'
+import { Bolos } from '../views/Bolos/Bolos';
+import Finalizar from '../views/Finalizar';
+import ConfirmarPedido from '../views/Confirmar';
 
 
 const router = createBrowserRouter([
@@ -32,7 +37,27 @@ const router = createBrowserRouter([
   },
   {
     path: "/bebidas",
-    element: <Bebidas data={BEBIDAS_MOCK}/>,
+    element: <Bebidas data={BEBIDAS_MOCK} adicionarPedidos={AdicionarPedidos} />,
+  },
+  {
+    path: "/bolos",
+    element: <Bolos data={BOLOS_MOCK} />,
+  },
+  {
+    path: "/doces",
+    element: <Doces data={DOCES_MOCK} />,
+  },
+  {
+    path: "/salgados",
+    element: <Salgados />,
+  },
+  {
+    path: "/finalizar",
+    element: <Finalizar />,
+  },
+  {
+    path: "/confirmar",
+    element: <ConfirmarPedido />
   },
   {
     path: "/descartaveis",

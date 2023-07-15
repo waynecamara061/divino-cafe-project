@@ -1,0 +1,205 @@
+section {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.form-container {
+  background: #C7B886;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container h1 {
+  font-family: "Playfair Display";
+  font-weight: 600;
+  font-size: 35px;
+
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.form-content {
+  width: 1000px;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.form-1-field {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-1-field input {
+  width: 388px;
+  height: 40px;
+  margin: 30px 0px 30px 8px;
+  padding-left: 15px;
+
+  background-color: #f5f5f5ea;
+  color: black;
+
+  font-family: "Playfair Display";
+  font-weight: 600;
+  font-size: 17px;
+
+  border-radius: 12px;
+  border: none;
+
+  outline: 0;
+}
+
+.form-1-field h1 {
+  font-family: "Playfair Display";
+  font-weight: 600;
+  font-size: 24px
+}
+
+.form-3-field {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-3-field input {
+  width: 230px;
+  height: 40px;
+  padding-left: 15px;
+  margin: 30px 15px 30px 8px;
+
+  background-color: #f5f5f5ea;
+  color: black;
+
+  font-family: "Playfair Display";
+  font-weight: 600;
+  font-size: 17px;
+
+  border-radius: 12px;
+  border: none;
+
+  outline: 0;
+}
+
+.form-3-field h1 {
+  font-family: "Playfair Display";
+  font-weight: 600;
+  font-size: 24px
+}
+
+.alert-content {
+  margin-top: 20px;
+}
+
+.pedido-section {
+  background: #C7B886;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 100px;
+}
+
+.pedido-section h1 {
+  font-size: 35px;
+  font-family: "Playfair Display";
+  font-weight: 600;
+}
+
+.pedido-container {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+
+.pedido-field {
+  width: 750px;
+  height: 90px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.pedido-field h1 {
+  font-size: 20px;
+  font-family: "Playfair Display";
+  font-weight: 500;
+  margin-right: 380px;
+  padding-left: 10px;
+}
+
+.pedido-field button {
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  border: 1px solid white;
+  outline: none;
+  margin: 0px 10px 0px 10px;
+}
+
+.pedido-field button:hover {
+  background-color: #cec39fc5;
+  color: white;
+}
+
+.total-content {
+  width: 100%;
+  height: 400px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  margin-top: 70px;
+}
+
+.total-content h1 {
+  font-size: 35px;
+  font-family: "Playfair Display";
+  font-weight: 500;
+}
+
+.total-content button {
+  background-color: #f5f5f5ea;
+  width: 300px;
+  height: 80px;
+
+  border: none;
+  border-radius: 4px;
+
+  font-size: 17px;
+  font-weight: 600;
+  font-family: "Playfair Display";
+
+  cursor: pointer;
+  margin-top: 80px;
+  margin-left: 230px;
+}
+
+.total-content button:hover {
+  background-color: #f1f1f1ce;
+  color: rgba(0, 0, 0, 0.753);
+  border: 1px solid #bdb7b7;
+}

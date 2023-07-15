@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import './index.scss';
 import Header from '../../src/components/Banner/Header/Header';
 import BebidasProduct from '../../src/components/Banner/Header/ProductBebidas/produto';
+import TabelaPedidos from '../TabelaPedidos/TabelaPedidos';
+import AdicionarPedidos from '../../src/components/Banner/Header/AdicionarPedidos/AdicionarPedidos';
+
+
 
 function Bebidas({ data }) {
   const cafe = data.filter((bebida) => bebida.tipo === 'Café');
@@ -11,6 +15,8 @@ function Bebidas({ data }) {
   const leite = data.filter((bebida) => bebida.tipo === 'Leite')
   const cha = data.filter((bebida) => bebida.tipo === 'Chá')
   
+  const { itensAdicionados, adicionarItem, removerItem, exibirTabela, alternarExibicaoTabela, finalizarPedido,} = AdicionarPedidos();
+
   return (
     <div>
       <Header />
@@ -19,61 +25,66 @@ function Bebidas({ data }) {
         <div className='bebidas__cards'>
           <div>
             <h1>Café</h1>
+            <div className='bebidas__content'></div>
             <div className='bebidas_itens'>
-              <div className='bebidas__content'></div>
                 {cafe.map((product) => (
-                  <BebidasProduct key={product.id} data={product} />
+                  <BebidasProduct key={product.id} data={product} onRemover={removerItem} onAdicionar={adicionarItem} />
                 ))}
             </div>
           </div>
           <div>
             <h1>Leite</h1>
+            <div className='bebidas__content'></div>
             <div className='bebidas_itens'>
-              <div className='bebidas__content'></div>
                 {leite.map((product) => (
-                  <BebidasProduct key={product.id} data={product} />
+                  <BebidasProduct key={product.id} data={product} onRemover={removerItem} onAdicionar={adicionarItem} />
                 ))}
             </div>
           </div>
           <div>
             <h1>Refrigerante</h1>
+            <div className='bebidas__content'></div>
             <div className='bebidas_itens'>
-              <div className='bebidas__content'></div>
                 {refrigerante.map((product) => (
-                  <BebidasProduct key={product.id} data={product} />
+                  <BebidasProduct key={product.id} data={product} onRemover={removerItem} onAdicionar={adicionarItem} />
                 ))}
             </div>
           </div>
           <div>
             <h1>Suco</h1>
+            <div className='bebidas__content'></div>
             <div className='bebidas_itens'>
-              <div className='bebidas__content'></div>
                 {suco.map((product) => (
-                  <BebidasProduct key={product.id} data={product} />
+                  <BebidasProduct key={product.id} data={product} onRemover={removerItem} onAdicionar={adicionarItem} />
                 ))}
             </div>
           </div>
           <div>
             <h1>Água</h1>
+            <div className='bebidas__content'></div>
             <div className='bebidas_itens last-item'>
-              <div className='bebidas__content'></div>
                 {agua.map((product) => (
-                  <BebidasProduct key={product.id} data={product} />
+                  <BebidasProduct key={product.id} data={product} onRemover={removerItem} onAdicionar={adicionarItem} />
                 ))}
             </div>
           </div>
           <div>
             <h1>Chá</h1>
+            <div className='bebidas__content'></div>
             <div className='bebidas_itens last-item'>
-              <div className='bebidas__content'></div>
                 {cha.map((product) => (
-                  <BebidasProduct key={product.id} data={product} />
+                  <BebidasProduct key={product.id} data={product} onRemover={removerItem} onAdicionar={adicionarItem} />
                 ))}
             </div>
           </div>
+          <button onClick={alternarExibicaoTabela}>
+                {exibirTabela ? 'Ocultar Tabela de Pedidos' : 'Exibir Tabela de Pedidos'}
+          </button>
+          {exibirTabela && <TabelaPedidos pedidos={itensAdicionados} />}
         </div>
       </div>
     </div>
+    
   );
 }
 
