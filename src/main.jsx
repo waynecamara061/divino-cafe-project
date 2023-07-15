@@ -18,6 +18,8 @@ import Finalizar from '../views/Finalizar';
 import ConfirmarPedido from '../views/Confirmar';
 import Descartaveis from '../views/Descartaveis/Descartaveis';
 import { DESCARTAVEIS_MOCK } from './mock/DescartaveisMock';
+import Utensilios from '../views/Utensilios/Utensilios';
+import { UTLEQUIPAMENTOS_MOCK } from './mock/UtlEquipamentosMock';
 
 
 const router = createBrowserRouter([
@@ -64,6 +66,10 @@ const router = createBrowserRouter([
   {
     path: "/descartaveis",
     element: <Descartaveis data={DESCARTAVEIS_MOCK}/>,
+  },
+  {
+    path: "/utensilios",
+    element: <Utensilios data={UTLEQUIPAMENTOS_MOCK}/>,
   },
 ]);
 
