@@ -58,7 +58,7 @@ function Finalizar() {
                     </div>
                 </form>
                 <div className="alert-content">
-                    <p>* O frete será cobradode acordo com a região de entrega; <br />
+                    <p>* O frete será cobrado de acordo com a região de entrega; <br />
                         ** Para emissão de nota fiscal, enviar dados completos do solicitante (nome, telefone CPF ou CNPJ e endereço),
                         <br /> via Whatsapp ou e-mail.</p>
                 </div>
