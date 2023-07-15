@@ -16,6 +16,8 @@ import { BOLOS_MOCK } from './mock/BolosMock'
 import { Bolos } from '../views/Bolos/Bolos';
 import Finalizar from '../views/Finalizar';
 import ConfirmarPedido from '../views/Confirmar';
+import Descartaveis from '../views/Descartaveis/Descartaveis';
+import { DESCARTAVEIS_MOCK } from './mock/DescartaveisMock';
 
 
 const router = createBrowserRouter([
