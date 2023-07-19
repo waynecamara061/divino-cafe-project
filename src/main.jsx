@@ -6,7 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Cardapio from '../views/Cardapio/Cardapio';
 import Bebidas from '../views/Bebidas/Bebidas'
 import { BEBIDAS_MOCK } from './mock/BebidasMock';
-import AdicionarPedidos from './components/Banner/Header/AdicionarPedidos/AdicionarPedidos';
+import { useAdicionarPedidos } from './components/Banner/Header/AdicionarPedidos/AdicionarPedidos';
 import { DOCES_MOCK } from './mock/DocesMock';
 
 const router = createBrowserRouter([
@@ -20,7 +20,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/bebidas",
-    element: <Bebidas data={BEBIDAS_MOCK} adicionarPedidos={AdicionarPedidos}/>,
+    element: <Bebidas data={BEBIDAS_MOCK} adicionarPedidos={useAdicionarPedidos}/>,
   },
 ]);
 

@@ -2,9 +2,10 @@ import React, { useState, useEffect, useCallback } from 'react';
 import './index.scss';
 import Header from '../../src/components/Banner/Header/Header';
 import BebidasProduct from '../../src/components/Banner/Header/ProductBebidas/produto';
-import useAdicionarPedidos from '../../src/components/Banner/Header/AdicionarPedidos/AdicionarPedidos'; 
+import { useAdicionarPedidos } from '../../src/components/Banner/Header/AdicionarPedidos/AdicionarPedidos'; 
 import ModalPedidos from '../../src/components/Banner/Header/modalPedidos/ModalPedidos';
 import '../../src/components/Banner/Header/modalPedidos/index.scss'
+
 function Bebidas({ data }) {
   const cafe = data.filter((bebida) => bebida.tipo === 'Café');
   const refrigerante = data.filter((bebida) => bebida.tipo === 'Refrigerante');
@@ -13,7 +14,7 @@ function Bebidas({ data }) {
   const leite = data.filter((bebida) => bebida.tipo === 'Leite');
   const cha = data.filter((bebida) => bebida.tipo === 'Chá');
 
-  const { adicionarItem, removerItem, alternarExibicaoModal } = useAdicionarPedidos(); // Utilizando o hook corretamente
+  const { adicionarItem, removerItem } = useAdicionarPedidos();// Utilizando o hook corretamente
 
   return (
     <div>
@@ -75,10 +76,8 @@ function Bebidas({ data }) {
               ))}
             </div>
           </div>
-          <div>
-            <ModalPedidos />
-          </div>
         </div>
+        <ModalPedidos adicionarPedidos={useAdicionarPedidos} />
       </div>
       <div>
       </div>

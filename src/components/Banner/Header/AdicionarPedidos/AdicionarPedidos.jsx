@@ -2,23 +2,13 @@ import React, { useState, useEffect, useCallback } from 'react';
 
 export const useAdicionarPedidos = () => {
   const [itensAdicionados, setItensAdicionados] = useState([]);
-
-  useEffect(() => {
-    const storedItens = localStorage.getItem('itensAdicionados');
-    if (storedItens) {
-      setItensAdicionados(JSON.parse(storedItens));
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem('itensAdicionados', JSON.stringify(itensAdicionados));
-    console.log('itensAdicionados atualizados:', itensAdicionados);
-  }, [itensAdicionados]);
-
+  // Função para adicionar um item
   const adicionarItem = (nomeItem) => {
+    // Verifica se o item já foi adicionado
     const itemExistente = itensAdicionados.find((item) => item.nome === nomeItem);
 
     if (itemExistente) {
+      // Se o item já existe, atualiza a quantidade
       const novosItens = itensAdicionados.map((item) => {
         if (item.nome === nomeItem) {
           return {
@@ -31,6 +21,7 @@ export const useAdicionarPedidos = () => {
 
       setItensAdicionados(novosItens);
     } else {
+      // Se o item não existe, adiciona um novo item ao array
       setItensAdicionados([
         ...itensAdicionados,
         {
@@ -41,21 +32,29 @@ export const useAdicionarPedidos = () => {
     }
   };
 
+
+  // Função para remover um item
   const removerItem = (nomeItem) => {
     const novosItens = itensAdicionados.map((item) => {
       if (item.nome === nomeItem) {
         return {
           ...item,
-          quantidade: item.quantidade - 1,
+          quantidade: item.quantidade - 1, // Altere o sinal de + para -
         };
       }
       return item;
     });
-
+  
+    // Remova os itens com quantidade zero
     const itensFiltrados = novosItens.filter((item) => item.quantidade > 0);
-
+  
     setItensAdicionados(itensFiltrados);
   };
+
+  useEffect(() => {
+    console.log('itensAdicionados:', itensAdicionados);
+  }, [itensAdicionados]);
+
 
   const finalizarPedido = useCallback((event) => {
     event.preventDefault();
@@ -64,12 +63,10 @@ export const useAdicionarPedidos = () => {
     localStorage.removeItem('itensAdicionados');
   }, [itensAdicionados]);
 
-  console.log('itensAdicionados inicial:', itensAdicionados);
-  
   const [exibirModal, setExibirModal] = useState(false);
 
   const alternarExibicaoModal = () => {
-    setExibirModal(!exibirModal);
+    setExibirModal((prevExibirModal) => !prevExibirModal);
   };
 
   return {
@@ -81,5 +78,3 @@ export const useAdicionarPedidos = () => {
     alternarExibicaoModal,
   };
 };
-
-export default useAdicionarPedidos

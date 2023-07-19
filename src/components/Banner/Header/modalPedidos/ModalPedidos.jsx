@@ -1,18 +1,21 @@
 import React from 'react';
 import Modal from 'react-modal';
 import TabelaPedidos from '../TabelaPedidos/TabelaPedidos';
-import useAdicionarPedidos from '../AdicionarPedidos/AdicionarPedidos';
+import { useAdicionarPedidos } from '../AdicionarPedidos/AdicionarPedidos';
+
+Modal.setAppElement('#root');
 
 const ModalPedidos = () => {
-  const { itensAdicionados, finalizarPedido, alternarExibicaoModal, exibirModal } = useAdicionarPedidos();
-
+  const adicionarPedidos = useAdicionarPedidos();
+  console.log(adicionarPedidos.itensAdicionados)
+  console.log(adicionarPedidos)
   return (
     <div>
-    <button onClick={alternarExibicaoModal}>Abrir Tabela</button>
-      <Modal isOpen={exibirModal} onRequestClose={alternarExibicaoModal} className="Modal" overlayClassName="ModalOverlay">
+      <button onClick={adicionarPedidos.alternarExibicaoModal}>Abrir Tabela</button>
+      <Modal isOpen={adicionarPedidos.exibirModal} onRequestClose={adicionarPedidos.alternarExibicaoModal} className="Modal" overlayClassName="ModalOverlay">
         <h2>Conteúdo do Modal</h2>
-        <TabelaPedidos pedidos={itensAdicionados} finalizarPedido={finalizarPedido} />
-        <button onClick={finalizarPedido}>Fechar</button>
+        <TabelaPedidos pedidos={adicionarPedidos.itensAdicionados} finalizarPedido={adicionarPedidos.finalizarPedido} />
+        <button onClick={adicionarPedidos.alternarExibicaoModal}>Fechar</button>
       </Modal>
     </div>
   );
