@@ -1,4 +1,7 @@
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 import { useState, useEffect } from 'react';
 import React from 'react';
 import './index.scss';
@@ -33,6 +36,7 @@ const BebidasProduct = ({ data, onAdicionar, onRemover }) => {
         >
           +
         </button>
+<<<<<<< Updated upstream
       </div>
     </div>
   );
@@ -52,10 +56,16 @@ const BebidasProduct = ({data}) => {
         <button>+</button>
         <span>0</span>
         <button>-</button>
+=======
+>>>>>>> Stashed changes
       </div>
     </div>
-  )
-}
+  );
+};
 
+<<<<<<< Updated upstream
 export default BebidasProduct
 >>>>>>> 7d1c03a9d455856f3de678ff44b28cbe3a162861
+=======
+export default BebidasProduct;
+>>>>>>> Stashed changes
