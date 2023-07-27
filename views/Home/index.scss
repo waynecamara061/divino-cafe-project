@@ -89,6 +89,19 @@
       text-decoration: none;
     }
   }
+  @media (max-width: 768px) {
+    .carrossel__texto-divino h1 {
+      font-size: 40px;
+    }
+  
+    .carrossel__texto-divino p {
+      font-size: 20px;
+    }
+  
+    .carrossel__btn button {
+      font-size: 24px;
+    }
+  }
 
 
 

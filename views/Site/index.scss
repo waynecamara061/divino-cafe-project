@@ -99,3 +99,13 @@
         background-color: #C7B886;
     }
 }
+
+@media (max-width: 400px) {
+    .nOrcamento {
+        button {
+            width: 200px;
+            height: 60px;
+            font-size: 13px;
+        }
+    }
+}

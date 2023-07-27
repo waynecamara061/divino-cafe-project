@@ -9,21 +9,21 @@ const Site = () => {
         <Header />
         <div className='nServicos'>
             <h1>
-NOSSOS SERVIÇOS
+                NOSSOS SERVIÇOS
             </h1>
             <h2>
-Coffe Break
+                Coffe Break
             </h2>
             <h3>
-Intervalo estratégico em reuniões, seminários, cursos ou congressos,<br></br>
-proporcionando um momento valaioso de networkin.
+                Intervalo estratégico em reuniões, seminários, cursos ou congressos,<br></br>
+                proporcionando um momento valaioso de networkin.
             </h3>
             <h2>
-Coquetéis
+                Coquetéis
             </h2>
             <h3>
-Proporciona um momento de descontração e valorização do seu evento, <br></br>
-produto, ou serviço junto aos seus clientes e colaboradores.
+                Proporciona um momento de descontração e valorização do seu evento, <br></br>
+                produto, ou serviço junto aos seus clientes e colaboradores.
             </h3>
 
         </div>

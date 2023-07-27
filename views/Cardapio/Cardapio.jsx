@@ -11,6 +11,7 @@ import { DESCARTAVEIS_MOCK } from '../../src/mock/DescartaveisMock';
 const Cardapio = ({ data }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMenuIconRotated, setIsMenuIconRotated] = useState(false);
 
   const handleLiClick = (index) => {
     setActiveIndex(index);
@@ -18,6 +19,10 @@ const Cardapio = ({ data }) => {
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const toggleMenuIconRotation = () => {
+    setIsMenuIconRotated(!isMenuIconRotated);
   };
 
   useEffect(() => {
@@ -82,16 +87,22 @@ const Cardapio = ({ data }) => {
           {window.innerWidth >= 800 ? (
             <ul className='category-list'>
               {Object.keys(filters).map((key, index) => (
-                <li key={index} onClick={() => handleLiClick(index)}>
+                <li key={index} onClick={() => handleLiClick(index)} className={index === activeIndex ? 'active' : ''}>
                   {key}
                 </li>
               ))}
             </ul>
           ) : (
-            <div className='header__menu-icon' onClick={toggleMobileMenu}>
-                <p>CATEGORIAS</p>
-                <i class="fa-solid fa-caret-up"></i>
-            </div>
+            <div
+            className={`header__menu-icon ${isMenuIconRotated ? 'rotated' : ''}`}
+            onClick={() => {
+              toggleMobileMenu();
+              toggleMenuIconRotation(); // Add this line to toggle the icon rotation
+            }}
+          >
+            <p>CATEGORIAS</p>
+            <i className="fa-solid fa-caret-up"></i>
+          </div>
           )}
           {isMobileMenuOpen && window.innerWidth < 800 && (
             <ul className='mobile-menu'>
