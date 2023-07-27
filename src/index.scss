@@ -2,7 +2,7 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
-   
+
 }
 body {
    background-color: #FDD7B466;
@@ -10,3 +10,17 @@ body {
    height: 100vh;
 }
 
+::-webkit-scrollbar {
+   width: 0px;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+
+}
+
+input[type=number] {
+   -moz-appearance: textfield;
+   appearance: textfield;
+
+}

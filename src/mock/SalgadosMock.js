@@ -630,15 +630,3 @@ export const SALGADOSFRITOS_MOCK = [
     unidade: '1',
   },
 ];
-
-// export const SALGADOSASSADOS_MOCK = [
-  
-// ];
-
-// export const CANAPES_MOCK = [
-  
-// ];
-
-// export const MINI_SANDUICHES_MOCK = [
-  
-// ];

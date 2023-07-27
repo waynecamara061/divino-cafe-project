@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './index.scss'
 import { Link } from "react-router-dom";
-
+import Modal from '../../Modal/Modal';
 
 
 const Header = () => {
@@ -15,6 +15,7 @@ const Header = () => {
 
   return (
     <div>
+      <Modal isOpen={openModal} setModalOpen={() => setOpenModal(!openModal)} />
       <div className='headerComp'>
         <div className='headerComp__component'>
           <Link to={'/'}>
@@ -49,6 +50,7 @@ const Header = () => {
     </div>
   );
 };
+
 
 export default Header;
 

@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import Header from '../../src/components/Banner/Header/Header';
-import { FaBars } from 'react-icons/fa';
-import ButtonsAddRemove from '../../src/components/Banner/Header/ButtonsAddRemove/produto';
+import ButtonsAddRemove from '../../src/components/Banner/Header/Products/ButtonsAddRemove/produto';
 import { useAdicionarPedidos } from '../../src/components/Banner/Header/AdicionarPedidos/AdicionarPedidos';
 import './index.scss';
 import { UTLEQUIPAMENTOS_MOCK } from '../../src/mock/UtlEquipamentosMock';
 import { DESCARTAVEIS_MOCK } from '../../src/mock/DescartaveisMock';
-
 
 const Cardapio = ({ data }) => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -51,7 +49,7 @@ const Cardapio = ({ data }) => {
   const filters = {
     'Salgados': {
       'Salgados Fritos': data.filter((Salgados) => Salgados.tipo === 'frito'),
-      'Salgados Assado': data.filter((Salgados) => Salgados.tipo === 'assado'),
+      'Salgados Assados': data.filter((Salgados) => Salgados.tipo === 'assado'),
       'Canapés': data.filter((Salgados) => Salgados.tipo === 'canapé'),
       'Mini Sanduíche': data.filter((Salgados) => Salgados.tipo === 'mini sanduíche'),
     },
@@ -64,6 +62,19 @@ const Cardapio = ({ data }) => {
       'Chá': data.filter((bebida) => bebida.tipo === 'Chá'),
     },
     'Doces & Bolos': {
+      
+      'Mini Pudim': data.filter((docesEbolos) => docesEbolos.tipo === 'mini pudim'),
+      'Trouxinha de Maçã': data.filter((docesEbolos) => docesEbolos.tipo === 'trouxinha de maça'),
+      'Brigadeiro Gourmet': data.filter((docesEbolos) => docesEbolos.tipo === 'brigadeiro gourmet'),
+      'Mini Brownie': data.filter((docesEbolos) => docesEbolos.tipo === 'mini brownie'),
+      'pão de mel': data.filter((docesEbolos) => docesEbolos.tipo === 'pão de mel'),
+      'Carolina': data.filter((docesEbolos) => docesEbolos.tipo === 'carolina'),
+      'Mini Tortinha': data.filter((docesEbolos) => docesEbolos.tipo === 'mini tortinha'),
+      'Bombom Tipo I': data.filter((docesEbolos) => docesEbolos.tipo === 'bombom tipo I'),
+      'Bombom Tipo II': data.filter((docesEbolos) => docesEbolos.tipo === 'bombom tipo II'),
+      'Bombom de Morango': data.filter((docesEbolos) => docesEbolos.tipo === 'bombom de morango' ),
+      'Trufas': data.filter((docesEbolos) => docesEbolos.tipo ==='trufa de chocolate'),
+      'Bem Casado': data.filter((docesEbolos) => docesEbolos.tipo === "bem casado"),
       'Doces': data.filter((docesEbolos) => docesEbolos.tipo === 'doce'),
       'Mini bolos': data.filter((docesEbolos) => docesEbolos.tipo === 'mini bolo'),
       'Bolos Artesanais': data.filter((docesEbolos) => docesEbolos.tipo === 'bolo artesanal'),
@@ -72,6 +83,7 @@ const Cardapio = ({ data }) => {
       'Utensilios & Equipamentos': UTLEQUIPAMENTOS_MOCK,
       'Descartaveis': DESCARTAVEIS_MOCK,
     },
+  
   };
 
   const { adicionarItem, removerItem } = useAdicionarPedidos();
