@@ -180,10 +180,7 @@ export const SALGADOSFRITOS_MOCK = [
     preco: 260.00,
     tipo: "frito",
     unidade: '100',
-  }
-];
-
-export const SALGADOSASSADOS_MOCK = [
+  },
   {
     id: 1,
     nome: "Pão de queijo",
@@ -422,9 +419,6 @@ export const SALGADOSASSADOS_MOCK = [
     tipo: "assado",
     unidade: '100',
   },
-];
-
-export const CANAPES_MOCK = [
   {
     id: 1,
     nome: "Tartelete de parmesão com creme de queijo Brie e geléia de damasco",
@@ -516,9 +510,6 @@ export const CANAPES_MOCK = [
     tipo: "canapé",
     unidade: '100',
   },
-];
-
-export const MINI_SANDUICHES_MOCK = [
   {
     id: 1,
     nome: "Mini sanduíche - Pasta de frango, queijo prato/mussarela, alface e tomate",
@@ -639,3 +630,15 @@ export const MINI_SANDUICHES_MOCK = [
     unidade: '1',
   },
 ];
+
+// export const SALGADOSASSADOS_MOCK = [
+  
+// ];
+
+// export const CANAPES_MOCK = [
+  
+// ];
+
+// export const MINI_SANDUICHES_MOCK = [
+  
+// ];

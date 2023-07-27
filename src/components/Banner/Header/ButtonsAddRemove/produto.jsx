@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import React from 'react';
 import './index.scss';
 
-const BebidasProduct = ({ data, onAdicionar, onRemover }) => {
+const ButtonsAddRemove = ({ data, onAdicionar, onRemover }) => {
   const initialValue = parseInt(localStorage.getItem(`counter_${data.nome}`)) || 0;
   const [counter, setCounter] = useState(initialValue);
 
@@ -30,32 +29,10 @@ const BebidasProduct = ({ data, onAdicionar, onRemover }) => {
             onAdicionar(data.nome);
             setCounter((prevCounter) => prevCounter + 1);
           }}
-        >
-          +
-        </button>
+        >+</button>
       </div>
     </div>
   );
 };
 
-export default BebidasProduct;
-=======
-import React from 'react'
-import './index.scss'
-const BebidasProduct = ({data}) => {
-  return (
-    
-    <div className='nameDrinks'>
-      <h1 >{data.nome}</h1>
-      <div className='nameDrinks__btn'>
-        <h1>{data.preco}</h1>
-        <button>+</button>
-        <span>0</span>
-        <button>-</button>
-      </div>
-    </div>
-  )
-}
-
-export default BebidasProduct
->>>>>>> 7d1c03a9d455856f3de678ff44b28cbe3a162861
+export default ButtonsAddRemove;

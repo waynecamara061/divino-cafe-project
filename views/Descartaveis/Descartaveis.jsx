@@ -1,7 +1,8 @@
 import React from 'react';
 import './index.scss';
 import Header from '../../src/components/Banner/Header/Header';
-import DescartaveisProduct from '../../src/components/Banner/Header/ProductDescartaveis/produto';
+import ButtonsAddRemove from '../../src/components/Banner/Header/ButtonsAddRemove/produto';
+import { useAdicionarPedidos } from '../../src/components/Banner/Header/AdicionarPedidos/AdicionarPedidos';
 
 function Descartaveis({ data }) {
   const copo = data.filter((descartaveis) => descartaveis.tipo === 'Copos');
@@ -9,6 +10,7 @@ function Descartaveis({ data }) {
   const colheres = data.filter((descartaveis) => descartaveis.tipo === 'Colheres');
   const misturadores = data.filter((descartaveis) => descartaveis.tipo === 'Misturadores');
   
+  const { adicionarItem, removerItem } = useAdicionarPedidos();
   
   return (
     <div>
@@ -21,7 +23,7 @@ function Descartaveis({ data }) {
             <div className='descartaveis_itens'>
               <div className='descartaveis__content'></div>
                 {copo.map((product) => (
-                  <DescartaveisProduct key={product.id} data={product} />
+                  <ButtonsAddRemove key={product.id} data={product} onRemover={removerItem} onAdicionar={adicionarItem} />
                 ))}
             </div>
           </div>
@@ -30,7 +32,7 @@ function Descartaveis({ data }) {
             <div className='bebidas_itens'>
               <div className='bebidas__content'></div>
                 {guardanapo.map((product) => (
-                  <DescartaveisProduct key={product.id} data={product} />
+                  <ButtonsAddRemove key={product.id} data={product} onRemover={removerItem} onAdicionar={adicionarItem} />
                 ))}
             </div>
           </div>
@@ -39,7 +41,7 @@ function Descartaveis({ data }) {
             <div className='bebidas_itens'>
               <div className='bebidas__content'></div>
                 {colheres.map((product) => (
-                  <DescartaveisProduct key={product.id} data={product} />
+                  <ButtonsAddRemove key={product.id} data={product} onRemover={removerItem} onAdicionar={adicionarItem} />
                 ))}
             </div>
           </div>
@@ -48,7 +50,7 @@ function Descartaveis({ data }) {
             <div className='bebidas_itens'>
               <div className='bebidas__content'></div>
                 {misturadores.map((product) => (
-                  <DescartaveisProduct key={product.id} data={product} />
+                  <ButtonsAddRemove key={product.id} data={product} onRemover={removerItem} onAdicionar={adicionarItem} />
                 ))}
             </div>
           </div>

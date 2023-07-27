@@ -447,10 +447,6 @@ export const DOCES_MOCK = [
     tipo: "doce",
     unidade: '100',
   },
-];
-
-
-export const MINIBOLOS_MOCK = [
   {
     id: 1,
     nome: "Mini bolinho no copo - Morango com chantilly",
@@ -539,9 +535,6 @@ export const MINIBOLOS_MOCK = [
     tipo: "mini bolo",
     unidade: '100',
   },
-];
-
-export const BOLOSARTESANAIS_MOCK = [
   {
     id: 1,
     nome: "Bolo de coco com cobertura de leite condensado e leite de coco",
@@ -633,14 +626,25 @@ export const BOLOSARTESANAIS_MOCK = [
     precofatia25a30: 70.00,
     tipo: "bolo artesanal",
   },
-];
-
-export const SALADADEFRUTA_MOCK = [
   {
     id: 1,
     nome: 'Salada de Frutas com Leite Condensado',
     Ingredientes: 'melão, uva verde, uva vermelha, abacaxi, mamão, maçã, laranja',
     Preco: 'R$9,00 por pessoa',
     Embalagem: 'pote descartável ou taça grande de vidro',
+    tipo: 'doce'
   }
 ];
+
+
+// export const MINIBOLOS_MOCK = [
+ 
+// ];
+
+// export const BOLOSARTESANAIS_MOCK = [
+  
+// ];
+
+// export const SALADADEFRUTA_MOCK = [
+  
+// ];

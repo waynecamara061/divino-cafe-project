@@ -161,4 +161,5 @@ export const BEBIDAS_MOCK = [
     tipo: 'Refrigerante',
     preco: 'R$ 5.50',
   },
+  
 ];
