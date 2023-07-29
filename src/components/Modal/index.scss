@@ -2,39 +2,34 @@
 
 .modalBG{
     background-color: rgba(0, 0, 0, 0.7);
-  
     position: fixed ;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     z-index: '1000';
-    align-items: center;
     justify-content: center;
     text-align: center;
     font-family: Playfair Display;
 
     &__modal{
-        
-        background-color: #B68F5D;
-        width: 800px;
-        height: 780px;
+        background-color: #C7B886;
+        width: 90%; 
+        max-width: 800px; 
+        height: auto; 
         border-radius: 15px;
-        align-items: center;
         justify-content: center;
-        text-align: center;
-
         padding-left: 20px;
-        padding-right: 20px;       
-
+        padding-right: 20px;
+        padding-bottom: 40px; 
         position: fixed;
-        top: 2.5%;
-        left: 25%;      
+        top: 50%; 
+        left: 50%; 
+        transform: translate(-50%, -50%);   
     }
 
     &__modal-fechar{
         justify-content: end;
-        align-items: end;
         text-align: end;
         margin-top: 15px;
         cursor: pointer;
@@ -42,7 +37,7 @@
 
     &__modal-text{
         font-family: Playfair Display;
-        font-size: 28px;
+        font-size: 20px;
         color: white;
         margin-top: 50px;
         text-align: center;
@@ -51,13 +46,28 @@
 
     &__modal-logo{
         width: 10%;
-        height: 10%;
+        height: auto; /* Ajuste a altura proporcionalmente à largura */
+        max-height: 10vh;
     }
 
     &__modal-equipe{
         border-radius: 15px;
         box-shadow: 5px 5px 10px rgb(0, 0, 0);
-        width: 500px;
-        height: 300px;
+        width: 90%; /* Use porcentagem em vez de um valor fixo em pixels */
+        max-width: 500px; /* Adicione um limite máximo para o tamanho da imagem */
+        height: auto; /* O modal ajustará a altura conforme o conteúdo */
+        max-height: 50vh;
     }
 }
+
+@media screen and (max-width: 600px) {
+    .modalBG__modal {
+      width: 95%; /* Ajuste a largura para telas menores */
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  
+    .modalBG__modal-text {
+      font-size: 24px; /* Ajuste o tamanho da fonte para telas menores */
+    }
+  }

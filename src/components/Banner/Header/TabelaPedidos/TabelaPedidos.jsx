@@ -2,11 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function TabelaPedidos({ pedidos, finalizarPedido }) {
+  console.log('resultado do map', pedidos)
   return (
     <form onSubmit={finalizarPedido}>
-      <table>
+      <table className='tabela'>
         <thead>
-          <tr>
+          <tr className='tabela'>
             <th>Item</th>
             <th>Quantidade</th>
             <th>Observação</th>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 
-const AdicionarPedidos = () => {
+export const useAdicionarPedidos = () => {
   const [itensAdicionados, setItensAdicionados] = useState([]);
   // Função para adicionar um item
   const adicionarItem = (nomeItem) => {
@@ -32,6 +32,7 @@ const AdicionarPedidos = () => {
     }
   };
 
+
   // Função para remover um item
   const removerItem = (nomeItem) => {
     const novosItens = itensAdicionados.map((item) => {
@@ -51,28 +52,29 @@ const AdicionarPedidos = () => {
   };
 
   useEffect(() => {
-    console.log(itensAdicionados);
+    console.log('itensAdicionados:', itensAdicionados);
   }, [itensAdicionados]);
 
-  const [exibirTabela, setExibirTabela] = useState(false);
-
-  // Função para exibir ou ocultar a tabela de pedidos
-  const alternarExibicaoTabela = () => {
-    setExibirTabela(!exibirTabela);
-  };
 
   const finalizarPedido = useCallback((event) => {
     event.preventDefault();
-    // Lógica para enviar o pedido ao finalizar
     console.log('Pedido finalizado:', itensAdicionados);
-    // Limpar o estado ou fazer qualquer outra ação necessária
     setItensAdicionados([]);
+    localStorage.removeItem('itensAdicionados');
   }, [itensAdicionados]);
 
-  return (
-    { itensAdicionados, adicionarItem, removerItem, exibirTabela, alternarExibicaoTabela, finalizarPedido,}
-    
-  )
-}
+  const [exibirModal, setExibirModal] = useState(false);
 
-export default AdicionarPedidos
+  const alternarExibicaoModal = () => {
+    setExibirModal((prevExibirModal) => !prevExibirModal);
+  };
+
+  return {
+    exibirModal,
+    itensAdicionados,
+    adicionarItem,
+    removerItem,
+    finalizarPedido,
+    alternarExibicaoModal,
+  };
+};
